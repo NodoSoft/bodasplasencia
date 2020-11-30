@@ -58,6 +58,7 @@ class AppRoutes {
         this.router.get('/get-info-servicos', appController_1.default.getInfoServicos);
         this.router.post('/actualizar-expositores-en-bannner', appController_1.default.actualizarExpositoresEnBannner);
         this.router.post('/actualizar-parrafo-colaboradores', appController_1.default.actualizarParrafoColaboradores);
+        this.router.post('/actualizar-color', appController_1.default.actualizarColor);
         // this.router.get('/get-expositores-home', appController.getExpositoresHome);
         // this.router.get('/get-expositores', appController.getExpositores);
         // this.router.get('/get-expositor/:id', appController.getExpositor);

@@ -72,6 +72,8 @@ this.router.get('/get-info-servicos', appController.getInfoServicos);
 
 this.router.post('/actualizar-expositores-en-bannner',appController.actualizarExpositoresEnBannner);
 this.router.post('/actualizar-parrafo-colaboradores',appController.actualizarParrafoColaboradores);
+ 
+this.router.post('/actualizar-color',appController.actualizarColor);
 // this.router.get('/get-expositores-home', appController.getExpositoresHome);
 // this.router.get('/get-expositores', appController.getExpositores);
 // this.router.get('/get-expositor/:id', appController.getExpositor);

@@ -80,10 +80,7 @@ class AppController {
     }
     getInfoSeccionesHome(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            // const seccion = pool.query('SELECT * FROM `seccion`');
-            // console.log('seccion '+seccion);
             let sqlResult = {};
-            // res.json(seccion);
             sqlResult['seccion'] = yield database_1.default.query('SELECT * FROM `seccion`');
             sqlResult['expositores'] = yield database_1.default.query('SELECT * FROM `expositores` where ubicadoEnHome = 1');
             sqlResult['colaboradores'] = yield database_1.default.query('SELECT * FROM `colaboradores`');
@@ -194,6 +191,11 @@ class AppController {
     actualizarParrafoColaboradores(req, res) {
         database_1.default.query('UPDATE `seccion` SET ?', [req.body]);
         res.json({ text: "parrafo colaboradores actualizado" });
+    }
+    actualizarColor(req, res) {
+        console.log(req.body);
+        database_1.default.query('UPDATE `seccion` SET ?', [req.body]);
+        res.json({ text: "color actualizado" });
     }
     actualizarQuienesSomos(req, res) {
         console.log(req.body);
